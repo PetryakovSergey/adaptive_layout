@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Lato:wght@300;400;700&family=Open+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+
+<body>
+    <div class="box-content">
+        <header>
+            <div class="header center">
+
+                <nav>
+                    <div class="header__left_icons">
+                        <a href="index.html"><img src="img/header/Group-2.svg" alt="logo"></a>
+                        <a href="#"><img src="img/header/Forma_1.svg" alt="search"></a>
+
+                    </div>
+                </nav>
+
+                <nav>
+                    <div class="header__right_icons">
+                        <div class="burger-menu">
+                            <label for="burger">
+                                <img class="burger-menu__img" src="img/header/Forma_1(1).svg" alt="burger-menu">
+                            </label>
+                            <input id="burger" type="checkbox" checked>
+                            <nav class="nav">
+                                <h3 class="nav__heading">MENU</h3>
+                                <details class="nav__class" open>
+                                    <summary>
+                                        <h3 class="nav__class_name">MAN</h3>
+                                    </summary>
+                                    <ul>
+                                        <li class="nav__subclass"><a href="#">Accessories</a> </li>
+                                        <li class="nav__subclass"><a href="#">Bags</a> </li>
+                                        <li class="nav__subclass"><a href="#">Denim</a> </li>
+                                        <li class="nav__subclass"><a href="#">T-Shirts</a> </li>
+                                    </ul>
+                                </details>
+                                <details class="nav__class" open>
+                                    <summary>
+                                        <h3 class="nav__class_name">WOMEN</h3>
+                                    </summary>
+                                    <ul>
+                                        <li class="nav__subclass"><a href="#">Accessories</a> </li>
+                                        <li class="nav__subclass"><a href="#">Jackets & Coats</a> </li>
+                                        <li class="nav__subclass"><a href="#">Polos</a> </li>
+                                        <li class="nav__subclass"><a href="#">T-Shirts</a> </li>
+                                        <li class="nav__subclass"><a href="#">Shirts</a> </li>
+                                    </ul>
+                                </details>
+                                <details class="nav__class" open>
+                                    <summary>
+                                        <h3 class="nav__class_name">KIDS</h3>
+                                    </summary>
+                                    <ul>
+                                        <li class="nav__subclass"><a href="#">Accessories</a> </li>
+                                        <li class="nav__subclass"><a href="#">Jackets & Coats</a> </li>
+                                        <li class="nav__subclass"><a href="#">Polos</a> </li>
+                                        <li class="nav__subclass"><a href="#">T-Shirts</a> </li>
+                                        <li class="nav__subclass"><a href="#">Shirts</a> </li>
+                                        <li class="nav__subclass"><a href="#">Bags</a> </li>
+                                    </ul>
+                                </details>
+                            </nav>
+                        </div>
+                        <a href="registration.html"><img class="hiden_img " src="img/header/Forma_1(2).svg"
+                                alt="men-icon"></a>
+                        <a class="things" href="cart.html"><img class="hiden_img " src="img/header/Forma_1(3).svg"
+                                alt="Cart">
+                        </a>
+                    </div>
+                </nav>
+
+
+            </div>
+
+        </header>
+        <section>
+            <div class="subject center">
+                <a href="#" class="subject_name">SHOPPING CART</a>
+            </div>
+        </section>
+
+        <div class="content center">
+            <section>
+                <div class="cart_content center">
+                    <div class="left_cart_content">
+                        <article>
+                            <div class="cart_items">
+                                <div class="cart_items_item">
+                                    <img class="item_img" src="img/cart_pic1.webp" alt="item1">
+                                    <div class="cart_item_info">
+                                        <h2 class="cart_item_title">MANGO PEOPLE <br>T-SHIRT
+                                        </h2>
+                                        <div class="cart_item_about">
+                                            <p class="cart_item_price">Price:</p>
+                                            <p class="cart_item_color">Color:</p>
+                                            <p class="cart_item_size">Size:</p>
+                                            <p class="cart_item_quantity">Quantity:</p>
+                                        </div>
+                                    </div>
+                                    <button class="delete_item"><svg width="18" height="18" viewBox="0 0 18 18"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
+                                                fill="#575757" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="cart_items_item">
+                                    <img class="item_img" src="img/cart_pic2.webp" alt="item1">
+                                    <div class="cart_item_info">
+                                        <h2 class="cart_item_title">MANGO PEOPLE <br>T-SHIRT
+                                        </h2>
+                                        <div class="cart_item_about">
+                                            <p class="cart_item_price">Price:</p>
+                                            <p class="cart_item_color">Color:</p>
+                                            <p class="cart_item_size">Size:</p>
+                                            <p class="cart_item_quantity">Quantity:</p>
+                                        </div>
+                                    </div>
+                                    <button class="delete_item"><svg width="18" height="18" viewBox="0 0 18 18"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
+                                                fill="#575757" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="cart_buttons">
+                                <div class="cart_buttons_box">
+                                    <a href="catalog.html" class="button_action">
+                                        <!-- <div class="button_content"> -->
+                                        <p class="content_text">CLEAR SHOPPING CART</p>
+                                        <!-- </div> -->
+                                    </a>
+
+                                    <a href="catalog.html" class="button_action">
+                                        <p class="content_text">CONTINUE SHOPPING</p>
+                                    </a>
+
+
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="cart_form">
+                        <article>
+                            <div class="shipping_form">
+                                <h3 class="form_name">
+                                    SHIPPING ADRESS
+                                </h3>
+                                <div>
+                                    <form class=" input_forms" action="#">
+                                        <input class="input_forms_form" type="text" name="City" placeholder="City">
+                                        <input class="input_forms_form" type="text" name="State" placeholder="State">
+                                        <input class="input_forms_form" type="number" name="Postcode"
+                                            placeholder="Postcode / Zip">
+                                    </form>
+
+                                </div>
+                                <button type="submit" class="sender">
+                                    GET A QUOTE
+                                </button>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="checkout_form">
+                                <div class="sub_total">
+                                    <p class="sub_total_text">SUB TOTAL</p>
+                                </div>
+                                <div class="grand_total">
+                                    <p class="grand_total_text">GRAND TOTAL</p>
+                                </div>
+
+                                <svg width="275" height="1" viewBox="0 0 275 1" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M275 0H0V1H275V0Z" fill="#E2E2E2" />
+                                </svg>
+                                <button class="checkout_button">
+                                    PROCEED TO CHECKOUT
+                                </button>
+
+                            </div>
+                        </article>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="bottom_content">
+
+            <section>
+                <div class="subscribe center">
+                    <article>
+                        <div class="subscribe__review">
+                            <img class="subscribe__review_img" src="img/women.webp" alt="subscribe__comment_pic">
+                            <p class="subscribe__review_text">&laquo;Vestibulum quis porttitor dui! Quisque <br> viverra
+                                nunc&nbsp;mi,
+                                a&nbsp;pulvinar
+                                purus <br>
+                                condimentum&raquo;</p>
+                        </div>
+
+                    </article>
+                    <article>
+                        <div class="subscribe__form">
+                            <h3 class="subscribe__title">
+                                SUBSCRIBE </h3>
+                            <p class="subscribe__text">FOR OUR NEWLETTER AND PROMOTION</p>
+                            <form class="subscribe__form_forma" action="#">
+                                <input type="email" placeholder="Enter Your Email" class="subscribe__form_input">
+                                <button class="subscribe__button" type="submit">Subscribe</button>
+
+                            </form>
+                        </div>
+                    </article>
+                </div>
+
+            </section>
+            <footer>
+                <div class="footer_block center">
+                    <p class="copyright">&copy; 2022 Brand All Rights Reserved.</p>
+                    <div class="bottom_links">
+
+                        <div class="links"><a class="link" href="#"><svg width="13" height="16" viewBox="0 0 13 16"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.7402 0.203125C3.55552 0.203125 0.408081 2.34063 0.408081 5.8C0.408081 8 1.63726 9.25 2.38221 9.25C2.68951 9.25 2.86643 8.3875 2.86643 8.14375C2.86643 7.85313 2.13079 7.23438 2.13079 6.025C2.13079 3.5125 4.03043 1.73125 6.48878 1.73125C8.60259 1.73125 10.167 2.94062 10.167 5.1625C10.167 6.82187 9.50585 9.93437 7.3641 9.93437C6.59121 9.93437 5.93006 9.37187 5.93006 8.56563C5.93006 7.38438 6.74951 6.24062 6.74951 5.02187C6.74951 2.95312 3.83487 3.32812 3.83487 5.82812C3.83487 6.35313 3.90006 6.93437 4.13286 7.4125C3.70451 9.26875 2.82919 12.0344 2.82919 13.9469C2.82919 14.5375 2.91299 15.1188 2.96886 15.7094C3.0744 15.8281 3.02163 15.8156 3.18304 15.7563C4.74744 13.6 4.69157 13.1781 5.39928 10.3562C5.78107 11.0875 6.76814 11.4812 7.55034 11.4812C10.8468 11.4812 12.3274 8.24688 12.3274 5.33125C12.3274 2.22813 9.66415 0.203125 6.7402 0.203125Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="links"><a class="link" href="#"><svg width="17" height="14" viewBox="0 0 17 14"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.4181 3.74107C14.4281 3.88319 14.4281 4.02535 14.4281 4.16747C14.4281 8.50247 11.1509 13.4974 5.16096 13.4974C3.31558 13.4974 1.60132 12.9593 0.159302 12.0253C0.421495 12.0558 0.673569 12.0659 0.94585 12.0659C2.46851 12.0659 3.8702 11.5482 4.98953 10.6649C3.5576 10.6345 2.3576 9.69032 1.94415 8.39081C2.14585 8.42125 2.34751 8.44156 2.5593 8.44156C2.85172 8.44156 3.14418 8.40094 3.41643 8.32991C1.92401 8.02531 0.80465 6.70553 0.80465 5.11163V5.07103C1.23825 5.31469 1.74249 5.46697 2.2769 5.48725C1.39959 4.89841 0.824826 3.89335 0.824826 2.75628C0.824826 2.14716 0.98614 1.58878 1.26851 1.10147C2.87187 3.09131 5.28195 4.39078 7.98443 4.53294C7.93403 4.28928 7.90376 4.0355 7.90376 3.78169C7.90376 1.97457 9.35586 0.502502 11.1609 0.502502C12.0987 0.502502 12.9457 0.89844 13.5407 1.53803C14.2768 1.39591 14.9827 1.12178 15.6079 0.746159C15.3659 1.5076 14.8516 2.14719 14.176 2.55325C14.8315 2.48222 15.4668 2.29944 16.0516 2.04566C15.608 2.69538 15.0533 3.27403 14.4181 3.74107Z"
+                                        fill="black" />
+                                </svg>
+                            </a></div>
+
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

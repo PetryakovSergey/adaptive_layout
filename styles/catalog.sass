@@ -1,0 +1,282 @@
+@import 'vars'
+@import 'mixins'
+
+body
+    font-family: 'Lato'
+
+ul
+    list-style-type: none
+
+details
+    cursor: pointer
+
+details summary
+    list-style: none
+
+.catalog_nav
+    height: 148px
+    background: #F8F3F4
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @at-root .arrivals
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 29px
+        color: $siteColor
+
+    @at-root .nav__links
+
+        &_link
+            font-style: normal
+            font-weight: 300
+            font-size: 14px
+            line-height: 17px
+            color: #636363
+            &:not(:last-child)::after
+                content: '/'
+                padding-left: 2px
+                padding-right: 5px
+            &:last-child
+                font-style: normal
+                font-weight: 700
+                font-size: 14px
+                line-height: 17px
+                color: $siteColor
+
+.main__content
+    margin-bottom: 665px
+
+.product
+    &__name
+        margin-bottom: 12px
+
+    &__price
+        margin-top: 18px
+
+.bottom_content
+    margin-top: 128px
+
+.filters_section
+
+    padding-top: 39px
+    padding-bottom: 64px
+    display: flex
+    gap: 30px
+
+    @at-root .filters__filter
+        display: flex
+        gap: 10px
+        position: relative
+        width: 360px
+
+        @at-root .filter
+            padding-top: 13px
+            z-index: 1
+            // padding-top: 13px;
+            position: absolute
+            width: 360px
+
+            &[open] .filter_name
+                // padding-top: 11px;
+                padding-left: 16px
+                color: $siteColor
+                transition: 0.3s
+
+            &[open] path
+                fill: $siteColor
+                transition: 0.3s
+
+            &[open]
+
+                box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+            &_content
+                // position: relative;
+                display: flex
+                align-items: center
+                gap: 10px
+                // width: 360px;
+
+            &_name
+                font-style: normal
+                font-weight: 600
+                font-size: 14px
+                line-height: 17px
+                color: #000000
+
+            &_opened_box
+                // position: absolute;
+                background: #FFFFFF
+                z-index: 1
+                width: 360px
+                padding-left: 16px
+                padding-right: 16px
+                padding-bottom: 16px
+                box-sizing: border-box
+                // box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+                @at-root .filter_item[open] .filter_heading
+                    color: $siteColor
+                    transition: 0.3s
+
+            &_heading
+                display: flex
+                box-sizing: border-box
+                margin-top: 18px
+                padding: 11px
+                border-bottom: 1px solid #EBEBEB
+                border-left: 5px solid $siteColor
+                font-style: normal
+                font-weight: 400
+                font-size: 14px
+                line-height: 17px
+
+                @at-root .links_box
+                    display: flex
+                    flex-direction: column
+                    gap: 11px
+                    padding: 24px 34px
+
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 17px
+                    color: #6F6E6E
+
+                @at-root .filter__link
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 17px
+                    color: $cartItemsAdditionalColor
+                    &:hover
+                        color: $siteColor
+                        transition: 0.3s
+
+    @at-root .filters__sorts
+
+        display: flex
+        gap: 28px
+        padding-top: 12px
+
+        &_sort
+            position: relative
+            display: flex
+            align-items: center
+            // gap: 10px;
+
+            @at-root .sort_name
+                margin-right: 10px
+                font-style: normal
+                font-weight: 400
+                font-size: 14px
+                line-height: 17px
+                color: #6F6E6E
+
+            @at-root .sort_box
+
+                margin-top: 5px
+                left: -13px
+                position: absolute
+                display: flex
+                gap: 6px
+                flex-direction: column
+                width: 79px
+                padding-top: 7px
+                padding-bottom: 11px
+                padding-left: 10px
+                z-index: 1
+                background: #FFFFFF
+                box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+                font-style: normal
+                font-weight: 400
+                font-size: 14px
+                line-height: 16px
+
+                color: $cartItemsAdditionalColor
+
+                @at-root .sort_choise
+                    display: flex
+                    gap: 10px
+
+.slider
+    display: flex
+    justify-content: center
+
+    @at-root &__pages
+        margin-top: 48px
+        padding: 12px 16px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 18px
+        border: 1px solid #EBEBEB
+        background: #FFFFFF
+        width: 284px
+        border-radius: 5px
+
+    &_links
+        font-style: normal
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        color: #C4C4C4
+
+        @at-root li:nth-child(2) .slider_links
+            color: $siteColor
+
+@media(max-width:1024px)
+    .catalog_nav
+        padding: 0px 16px
+
+    .tab__product-card
+        display: none
+
+@media(max-width:767px)
+    .catalog_nav
+        display: flex
+        flex-direction: column
+        gap: 32px
+        justify-content: center
+
+    .filters_section
+
+        padding-top: 11px
+        padding-bottom: 32px
+        display: flex
+
+        gap: 30px
+        @at-root .filters__filter
+            width: 48px
+
+            @at-root .filter
+                padding-top: 13px
+                width: 60px
+
+                @at-root .filter_name
+                    display: none
+
+                @at-root .filter_content svg
+                    width: 38px
+                    height: 25px
+                &[open]
+                    width: 360px
+                    // padding-left: 16px
+                &[open] path
+                    fill: $siteColor
+                    transition: 0.3s
+
+        @at-root .filters__sorts
+            padding-top: 13px
+
+            @at-root .sort_name
+
+                font-style: normal
+                font-weight: 400
+                font-size: 12px
+                line-height: 14px
+                color: $cartItemsAdditionalColor

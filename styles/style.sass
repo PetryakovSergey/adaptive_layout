@@ -1,0 +1,699 @@
+@import 'vars'
+@import 'mixins'
+
+*
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'Lato'
+
+details>summary 
+    list-style: none
+
+li
+    list-style-type: none
+
+a
+    text-decoration: none
+
+.center
+    padding-left: calc(50% - $widthSite/2)
+    padding-right: calc(50% - $widthSite/2)
+
+.box-content
+    overflow: hidden
+
+.header
+    display: flex
+    justify-content: space-between
+    background: $darkBackColor
+    position: relative
+
+    &__left_icons
+        margin-top: 18px
+        margin-bottom: 19px
+        display: flex
+        gap: 41px
+        align-items: flex-end
+
+    &__right_icons
+        padding-right: 20px
+        margin-top: 26px
+        margin-bottom: 20px
+        display: flex
+        gap: 33px
+        align-items: center
+
+        &:last-child a
+            position: relative
+
+            @at-root .things::after
+                position: absolute
+                background-image: url(../img/Ellipse2.svg)
+                content: '5'
+                color: #FBFBFB
+                left: 29px
+                bottom: 25px
+                width: 19px
+                height: 19px
+                @include centerFlex()
+
+        @at-root .burger-menu__img
+            cursor: pointer
+
+        @at-root .nav
+            position: absolute
+            background: #FFFFFF
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+            padding: 32px
+            width: 232px
+            z-index: 1
+            box-sizing: border-box
+            top: 78px
+            right: 0px
+            transition: right 0.3s
+
+            &__heading
+
+                margin-bottom: 4px
+                font-style: normal
+                font-weight: 700
+                font-size: 14px
+                line-height: 17px
+                color: $textColor
+
+            &__class_name
+                margin-top: 20px
+                font-style: normal
+                font-weight: 400
+                font-size: 14px
+                line-height: 17px
+                color: $siteColor
+
+            &__subclass
+                margin-top: 12px
+
+                &:hover a
+                    color: $siteColor
+
+                & a
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 17px
+                    color: #6F6E6E
+                    padding-left: 20px
+
+#burger
+    position: absolute
+    left: -9999999999999999999999px
+    visibility: hidden
+
+    &:checked~.nav
+        right: -250px
+
+.top_info
+
+    font-family: 'Lato'
+    margin-bottom: 65px
+    display: flex
+    align-items: center
+    background: #F1E4E6
+
+    @at-root .img_men
+        max-width: 50%
+        max-height: 765px
+        margin-right: 64px
+
+    @at-root .rectangle
+
+        margin-right: 16px
+
+    @at-root .promo_title
+        font-style: normal
+        font-weight: 900
+        font-size: 48px
+        line-height: 58px
+
+        color: $textColor
+
+    @at-root .promo_heading
+        font-style: normal
+        font-weight: 700
+        font-size: 32px
+        line-height: 38px
+
+        color: $textColor
+
+        @at-root .fasion
+            font-style: normal
+            font-weight: 700
+            font-size: 32px
+            line-height: 38px
+
+            color: $siteColor
+
+.content
+
+    font-family: 'Lato'
+    background: #FFFFFF
+
+.upper_blocks
+
+    display: grid
+    grid-template-columns: repeat(3, minmax(232px, 360px))
+
+    gap: 30px
+    justify-content: center
+    box-sizing: border-box
+
+    @at-root .item
+        min-height: 260px
+
+        @at-root .item1
+            position: relative
+
+        @at-root .info1
+            position: absolute
+            background-image: url(../img/Group_36.webp)
+            background-size: cover
+            top: 0px
+            left: 0px
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+        @at-root .item2
+            position: relative
+
+        @at-root .info2
+            position: absolute
+            background-image: url(../img/Group_37.webp)
+            background-size: cover
+            top: 0px
+            left: 0px
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+        @at-root .item3
+            position: relative
+
+        @at-root .info3
+            position: absolute
+            background-image: url(../img/Group_38.webp)
+            background-size: cover
+            top: 0px
+            left: 0px
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+        @at-root .item4
+            position: relative
+            grid-column-start: span 3
+            min-height: 180px
+
+        @at-root .info4
+            position: absolute
+            background-image: url(../img/Group_39.webp)
+            background-size: cover
+            background-position: center
+            top: 0px
+            left: 0px
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+        @at-root .text
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 19px
+            text-align: center
+            white-space: nowrap
+            color: #FFFFFF
+
+        @at-root .title
+            font-style: normal
+            font-weight: 700
+            font-size: 24px
+            line-height: 29px
+            text-align: center
+
+            color: $siteColor
+
+.between_text
+    margin-top: 96px
+    margin-bottom: 48px
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 6px
+
+    @at-root .subtitle
+        font-style: normal
+        font-weight: 400
+        font-size: 30px
+        line-height: 36px
+        color: $textColor
+
+    @at-root .mid_text
+
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        color: #9F9F9F
+
+.product
+    display: grid
+    grid-template-columns: repeat(auto-fill, 360px)
+    gap: 30px
+    justify-content: center
+
+    &__card
+        background: #F8F8F8
+
+        @at-root .hover_effect
+            position: relative
+
+            @at-root .basket
+
+                background-color: rgba(58, 56, 56)
+                opacity: 0
+                @include centerFlex()
+
+                overflow: hidden
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+
+                @at-root .basket_box
+                    @include centerFlex()
+                    gap: 11px
+                    border: 1px solid #FFFFFF
+                    width: 138px
+                    height: 43px
+
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 17px
+                    color: #FFFFFF
+
+                &:hover
+                    transition: 0.3s
+                    opacity: 0.86
+
+    &__info
+        padding-top: 24px
+        padding-bottom: 24px
+        padding-left: 16px
+        padding-right: 16px
+
+    &__name
+        font-style: normal
+        font-weight: 400
+        font-size: 13px
+        line-height: 16px
+        color: #000000
+        flex: none
+        order: 0
+        flex-grow: 0
+
+    &__text
+        font-style: normal
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        color: #5D5D5D
+        flex: none
+        order: 1
+        flex-grow: 0
+
+    &__price
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+        color: $siteColor
+        flex: none
+        order: 2
+        flex-grow: 0
+
+.button_pos
+    display: flex
+    justify-content: center
+
+    @at-root .button_browse
+        padding-top: 15px
+        padding-bottom: 14px
+        padding-left: 39px
+        padding-right: 39px
+        margin-top: 48px
+        margin-bottom: 60px
+
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+
+        color: $siteColor
+        border: 1px solid $siteColor
+        background: #FFFFFF
+
+        &:hover
+            background-color: $siteColor
+            color: #FFFFFF
+            transition: 0.3s
+
+.bottom_content
+    font-family: 'Lato'
+
+.advantage
+    background: $darkBackColor
+    padding-top: 103px
+    padding-bottom: 104px
+    padding-left: 8px
+    padding-right: 8px
+    display: grid
+    grid-template-columns: repeat(3, 360px)
+    gap: 30px
+    align-items: center
+    justify-content: center
+
+    &__item:first-child &__image
+        margin-bottom: 28px
+
+        &__item:nth-child(2) &__image
+            margin-bottom: 19px
+
+        &__item:last-child &__image
+            margin-bottom: 25px
+
+    &__item
+
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &__heading
+        margin-bottom: 16px
+        font-style: normal
+        font-weight: 400
+        font-size: 19.96px
+        line-height: 24px
+        /* identical to box height */
+
+        color: #FBFBFB
+
+    &__discription
+        font-style: normal
+        font-weight: 300
+        font-size: 13.972px
+        line-height: 17px
+        text-align: center
+
+        color: #FBFBFB
+
+.subscribe
+    background-image: url(../img/photo-subscribe.webp)
+    // background-position-x: -10px;
+    background-size: cover
+    object-fit: contain
+    // height: 448px;
+    padding-top: 86px
+    padding-bottom: 156px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+    &__review
+
+        @include centerFlex()
+        flex-direction: column
+        gap: 30px
+
+        &_img
+            max-width: 96px
+            max-height: 96px
+
+        &_text
+            text-align: center
+            font-style: normal
+            font-weight: 400
+            font-size: 20px
+            line-height: 24px
+            text-align: center
+            color: $textColor
+
+    &__form
+        margin-top: 38px
+        flex-direction: column
+
+        &_forma
+            margin-top: 32px
+            height: 49px
+            display: flex
+            justify-content: center
+            align-items: flex-end
+            max-width: 360px
+
+        &_input
+            padding-left: 22px
+            padding-right: 22px
+            width: 256px
+            height: 49px
+            background: #E1E1E1
+            border: none
+            border-top-left-radius: 30px
+            border-bottom-left-radius: 30px
+            color: $textColor
+            opacity: 0.67
+
+    &__title
+        font-style: normal
+        font-weight: 700
+        font-size: 24px
+        line-height: 167.2%
+
+        text-align: center
+
+        color: $textColor
+
+    &__text
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 167.2%
+
+        text-align: center
+
+        color: $textColor
+
+    &__button
+        width: 100px
+        height: 49px
+        border-top-right-radius: 30px
+        border-bottom-right-radius: 30px
+        margin-top: 32px
+        border: none
+        left: 73.31%
+        right: 20.44%
+        top: 54.24%
+        bottom: 34.82%
+        cursor: pointer
+        background: $siteColor
+        color: #FFFFFF
+
+    &__button:active
+        border: 3px solid #866f6f
+
+.footer_block
+    height: 79px
+    background: $textColor
+    // padding-left: 235px;
+    // padding-right: 230px;
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @at-root .copyright
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+
+        color: #FBFBFB
+
+    @at-root .bottom_links
+        display: flex
+        gap: 7px
+
+        @at-root .links
+            position: relative
+            display: flex
+            width: 32px
+            height: 32px
+
+            @at-root .link
+                position: absolute
+                background-color: white
+                @include centerFlex()
+
+                width: 32px
+                height: 31px
+
+                &:hover path
+
+                    fill: white
+                    transition: 0.3s
+
+            &:hover a
+                background-color: $siteColor
+                transition: 0.3s
+
+@media(max-width: 1024px)
+    .center
+        padding-left: calc(50% - $tabWidthSite/2)
+        padding-right: calc(50% - $tabWidthSite/2)
+
+    .header
+        padding-left: 32px
+        padding-right: 32px
+
+    .top_info
+        margin-bottom: 19px
+
+        @at-root .img_men
+            margin-right: 40px
+
+        @at-root .promo_title
+            font-size: 44px
+            line-height: 53px
+
+        @at-root .promo_heading
+            font-size: 24px
+            line-height: 29px
+
+            @at-root .fasion
+                font-size: 24px
+                line-height: 29px
+
+    .content
+        padding-left: 16px
+        padding-right: 16px
+
+    .upper_blocks
+        gap: 20px
+
+        @at-root .item
+            min-height: 168px
+
+    // &
+    //     min-height: 116px
+
+    .between_text
+        margin-top: 154px
+        margin-bottom: 72px
+
+    .product
+        gap: 16px
+
+    .button_browse
+        margin-top: 32px
+        margin-bottom: 64px
+
+    .advantage
+        grid-template-columns: repeat(1, 360px)
+        gap: 48px
+        padding-top: 48px
+        padding-bottom: 64px
+
+    .subscribe
+        flex-direction: column
+        padding-top: 0
+        padding-bottom: 0
+        align-content: center
+
+        &__review
+            padding-top: 64px
+
+        &__form
+            margin-top: 48px
+            margin-bottom: 140px
+
+    .footer_block
+        padding: 0px 32px
+
+@media(max-width: 767px)
+    .center
+        padding-left: calc(50% - 180px)
+        padding-right: calc(50% - 180px)
+
+    .header
+        padding-left: 16px
+        padding-right: 16px
+
+        &__right_icons
+            padding: 0
+            gap: 0
+            @at-root .hiden_img
+                display: none
+            @at-root .things
+                display: none
+
+    .top_info
+        display: flex
+        justify-content: center
+        height: 363px
+        @at-root .img_men
+            display: none
+
+    .upper_blocks
+        padding: 0px 8px
+        display: flex
+        flex-direction: column
+        @at-root .item
+            height: 248px
+
+            &4
+                height: 111px
+
+    .between_text
+        margin: 0
+        padding: 64px 14px
+
+    .subscribe
+        &__review_text
+            font-size: 18px
+            line-height: 22px
+
+        &__text
+            font-size: 14px
+            line-height: 153.2%
+
+        &__form
+            margin-bottom: 110px
+            &_forma
+                padding: 0px 8px
+                box-sizing: border-box
+
+    .footer_block
+        flex-direction: column-reverse
+        padding-top: 43px
+        padding-bottom: 9px
+        @at-root .hiden-links
+            display: none

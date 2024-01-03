@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato";
+}
+
+li {
+  list-style-type: none;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 64px;
+  padding-bottom: 96px;
+  gap: 128px;
+}
+.user_data {
+  min-width: 360px;
+}
+.registration {
+  display: flex;
+  flex-direction: column;
+}
+.registration__heading {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222;
+}
+.registration__input {
+  margin-top: 20px;
+  padding: 13px 18px 16px;
+  background: #FFFFFF;
+  border: 1px solid #A4A4A4;
+}
+.registration__input_round {
+  padding-top: 31px;
+  padding-bottom: 33px;
+}
+.registration__input::-moz-placeholder {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+.registration__input::placeholder {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+.registration__input_gender {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #222;
+}
+.registration__text {
+  margin-top: 15px;
+  margin-bottom: 39px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+
+.sender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 167px;
+  height: 50px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  background-color: #F16D7F;
+  border-style: none;
+  cursor: pointer;
+}
+.sender:active {
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.perks {
+  display: flex;
+  flex-direction: column;
+}
+.perks__heading {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222;
+}
+.perks__text {
+  margin-top: 21px;
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222;
+}
+.perks__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222;
+}
+.perks__info_sticker::before {
+  content: url(../img/sticker.svg);
+  margin-right: 22px;
+}
+
+.subject {
+  display: flex;
+  justify-content: start;
+  background: #F8F3F4;
+}
+.subject__name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #F16D7F;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    gap: 40px;
+    padding-top: 40px;
+  }
+  .subject {
+    padding: 0px 16px;
+  }
+  .perks__heading {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .perks__text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .perks__info {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    flex-wrap: wrap;
+  }
+  .subject {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=registration.css.map */

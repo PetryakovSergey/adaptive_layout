@@ -1,0 +1,240 @@
+@import 'vars'
+@import 'mixins'
+
+body
+    font-family: 'Lato'
+
+details summary
+    list-style: none
+
+.catalog_nav
+    height: 148px
+    background: #F8F3F4
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @at-root .arrivals
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 29px
+        color: $siteColor
+
+    @at-root .nav__links
+
+        &_link
+            font-style: normal
+            font-weight: 300
+            font-size: 14px
+            line-height: 17px
+            color: #636363
+            &:not(:last-child)::after
+                content: '/'
+                padding-left: 2px
+                padding-right: 5px
+            &:last-child
+                font-style: normal
+                font-weight: 700
+                font-size: 14px
+                line-height: 17px
+                color: $siteColor
+
+.main__content
+
+    // position: relative;
+    margin-bottom: 665px
+
+.main__catalog_pic
+    height: 777px
+    @include centerFlex()
+    position: relative
+    background: #F7F7F7
+
+    @at-root .left_slider
+        background: rgba(42, 42, 42, 0.15)
+        display: flex
+        height: 47px
+        width: 47px
+        justify-content: center
+        align-items: center
+        position: absolute
+        left: 0px
+
+        &:hover path
+            fill: $siteColor
+
+    @at-root .right_slider
+        background: rgba(42, 42, 42, 0.15)
+        display: flex
+        height: 47px
+        width: 47px
+        justify-content: center
+        align-items: center
+        position: absolute
+        right: 0px
+
+        &:hover path
+            fill: $siteColor
+
+.main__content_about
+    margin-top: -70px
+    background: #FFFFFF
+
+    position: absolute
+    margin-left: auto
+    margin-right: auto
+    left: 0
+    right: 0
+
+    border: 1px solid #EAEAEA
+    width: 1140px
+
+    @at-root .main__content_info
+        @include centerFlex()
+        flex-direction: column
+
+        &_heading
+            margin-top: 64px
+            margin-bottom: 12px
+            font-style: normal
+            font-weight: 300
+            font-size: 14px
+            line-height: 17px
+
+            color: $siteColor
+
+        &_subtitle
+            margin-top: 12px
+            font-style: normal
+            font-weight: 300
+            font-size: 18px
+            line-height: 22px
+
+            color: #4D4D4D
+
+        &_text
+            margin-top: 48px
+            margin-bottom: 32px
+            max-width: 555px
+            font-style: normal
+            font-weight: 300
+            font-size: 14px
+            line-height: 17px
+            text-align: center
+
+            color: #5E5E5E
+
+        &_price
+            margin-bottom: 65px
+            font-style: normal
+            font-weight: 300
+            font-size: 24px
+            line-height: 29px
+
+            color: $siteColor
+
+    @at-root .main__content_choise
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+
+        color: #6F6E6E
+
+        &_filters
+            margin-top: 65px
+            margin-bottom: 48px
+            @include centerFlex()
+            flex-direction: row
+            gap: 23px
+
+            &_item_sort
+                display: flex
+                align-items: center
+                gap: 9px
+
+    @at-root .main__content__basket
+        display: flex
+        justify-content: center
+        margin-top: 48px
+        margin-bottom: 65px
+
+        &_box
+            padding-left: 23px
+            height: 47px
+            width: 211px
+            border: 1px solid $siteColor
+            display: flex
+            align-items: center
+            gap: 23px
+
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 19px
+            color: $siteColor
+            &:hover
+                background: $siteColor
+                color: white
+            &:hover path
+                fill: white
+
+.product
+    &__name
+        margin-top: 24px
+        margin-bottom: 12px
+
+    &__price
+        margin-top: 18px
+        margin-bottom: 20px
+
+.bottom_content
+    margin-top: 128px
+
+    @at-root .review_text
+        text-align: center
+
+@media(max-width:1024px)
+    .catalog_nav
+        padding: 0px 16px
+
+    .tab__product-card
+        display: none
+
+    .main__content_about
+        margin-top: 0
+        width: calc(100% - 2px)
+
+    .bottom_content
+        margin-top: 128px
+
+@media(max-width:767px)
+    .catalog_nav
+        display: flex
+        flex-direction: column
+        gap: 32px
+        justify-content: center
+
+    .main__content
+        margin-bottom: 634px
+        @at-root .main__content_info
+            padding: 0px 24px
+            &_text
+                margin-top: 32px
+            &_price
+                margin-bottom: 32px
+
+        @at-root .main__content_info svg
+            width: 174px
+
+        .main__content_choise_filters
+            margin-top: 49px
+            &_item_sort
+                font-style: normal
+                font-weight: 400
+                font-size: 10px
+                line-height: 12px
+                color: #6F6E6E
+    .bottom_content
+        margin-top: 64px
